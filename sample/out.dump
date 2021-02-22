@@ -1,0 +1,100 @@
+
+out:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	10000013          	li	zero,256
+   4:	10000093          	li	ra,256
+   8:	10000113          	li	sp,256
+   c:	10000193          	li	gp,256
+  10:	10000213          	li	tp,256
+  14:	10000293          	li	t0,256
+  18:	10000313          	li	t1,256
+  1c:	10000393          	li	t2,256
+  20:	10000413          	li	s0,256
+  24:	10000493          	li	s1,256
+  28:	10000513          	li	a0,256
+  2c:	10000593          	li	a1,256
+  30:	10000613          	li	a2,256
+  34:	10000693          	li	a3,256
+  38:	10000713          	li	a4,256
+  3c:	10000793          	li	a5,256
+  40:	10000813          	li	a6,256
+  44:	20000893          	li	a7,512
+  48:	10000913          	li	s2,256
+  4c:	10400993          	li	s3,260
+  50:	10000a13          	li	s4,256
+  54:	10000a93          	li	s5,256
+  58:	10000b13          	li	s6,256
+  5c:	10000b93          	li	s7,256
+  60:	10000c13          	li	s8,256
+  64:	10000c93          	li	s9,256
+  68:	10000d13          	li	s10,256
+  6c:	10000d93          	li	s11,256
+  70:	10000e13          	li	t3,256
+  74:	10000e93          	li	t4,256
+  78:	10000f13          	li	t5,256
+  7c:	10000f93          	li	t6,256
+  80:	01498933          	add	s2,s3,s4
+  84:	41498933          	sub	s2,s3,s4
+  88:	01499933          	sll	s2,s3,s4
+  8c:	0149a933          	slt	s2,s3,s4
+  90:	0149b933          	sltu	s2,s3,s4
+  94:	0149c933          	xor	s2,s3,s4
+  98:	0149d933          	srl	s2,s3,s4
+  9c:	4149d933          	sra	s2,s3,s4
+  a0:	0149e933          	or	s2,s3,s4
+  a4:	0149f933          	and	s2,s3,s4
+  a8:	03698913          	addi	s2,s3,54
+  ac:	2039a913          	slti	s2,s3,515
+  b0:	0019b913          	seqz	s2,s3
+  b4:	0ff9c913          	xori	s2,s3,255
+  b8:	0ff9e913          	ori	s2,s3,255
+  bc:	0ff9f913          	andi	s2,s3,255
+  c0:	00399913          	slli	s2,s3,0x3
+  c4:	0039d913          	srli	s2,s3,0x3
+  c8:	4039d913          	srai	s2,s3,0x3
+  cc:	03498933          	mul	s2,s3,s4
+  d0:	0349c933          	div	s2,s3,s4
+  d4:	00001037          	lui	zero,0x1
+  d8:	00000013          	nop
+  dc:	00001037          	lui	zero,0x1
+  e0:	00000013          	nop
+  e4:	00001037          	lui	zero,0x1
+  e8:	00000013          	nop
+  ec:	00001037          	lui	zero,0x1
+  f0:	00000013          	nop
+  f4:	00010a37          	lui	s4,0x10
+  f8:	fffa0a13          	addi	s4,s4,-1 # ffff <__global_pointer$+0xe68b>
+  fc:	0148a423          	sw	s4,8(a7)
+ 100:	00010a37          	lui	s4,0x10
+ 104:	fffa0a13          	addi	s4,s4,-1 # ffff <__global_pointer$+0xe68b>
+ 108:	01489223          	sh	s4,4(a7)
+ 10c:	00010a37          	lui	s4,0x10
+ 110:	fffa0a13          	addi	s4,s4,-1 # ffff <__global_pointer$+0xe68b>
+ 114:	01488023          	sb	s4,0(a7)
+ 118:	10000913          	li	s2,256
+ 11c:	0088a903          	lw	s2,8(a7)
+ 120:	10000913          	li	s2,256
+ 124:	00889903          	lh	s2,8(a7)
+ 128:	10000913          	li	s2,256
+ 12c:	00888903          	lb	s2,8(a7)
+ 130:	0088c903          	lbu	s2,8(a7)
+ 134:	0088d903          	lhu	s2,8(a7)
+ 138:	037b8263          	beq	s7,s7,15c <_start+0x15c>
+ 13c:	03791263          	bne	s2,s7,160 <_start+0x160>
+ 140:	03794263          	blt	s2,s7,164 <_start+0x164>
+ 144:	032bd263          	ble	s2,s7,168 <_start+0x168>
+ 148:	03796263          	bltu	s2,s7,16c <_start+0x16c>
+ 14c:	032bf263          	bleu	s2,s7,170 <_start+0x170>
+ 150:	500000e7          	jalr	1280(zero) # 500 <_start+0x500>
+ 154:	01000937          	lui	s2,0x1000
+ 158:	80000917          	auipc	s2,0x80000
+ 15c:	fe1ff0ef          	jal	ra,13c <_start+0x13c>
+ 160:	fe1ff0ef          	jal	ra,140 <_start+0x140>
+ 164:	fe1ff0ef          	jal	ra,144 <_start+0x144>
+ 168:	fe1ff0ef          	jal	ra,148 <_start+0x148>
+ 16c:	fe1ff0ef          	jal	ra,14c <_start+0x14c>
+ 170:	fe1ff0ef          	jal	ra,150 <_start+0x150>
